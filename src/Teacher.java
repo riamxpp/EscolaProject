@@ -8,6 +8,14 @@ public class Teacher extends Person {
         setName(name);
     }
 
+    @Override // sobrescre o método toString() para conseguir exibir o Student no system.out;
+    public String toString() {
+        return "Nome: " + getName() +
+                ", Data de Nascimento: " + getDateOfBirth() +
+                ", Ocupação: " + getOccupation() +
+                ", Salário: " + getWage();
+    }
+
     public double getWage() {
         return wage;
     }
