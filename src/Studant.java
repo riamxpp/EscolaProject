@@ -1,4 +1,4 @@
-class Studant extends Person {
+public class Studant extends Person {
     private String registration;
     private String studant_class;
     private String[] score;
