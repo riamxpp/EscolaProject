@@ -1,5 +1,7 @@
+import java.util.ArrayList;
+
 public class Teacher extends Person {
-    private String[] subjectsTeaching;
+    private final  ArrayList<String> subjectsTeaching = new ArrayList<>();
     private double wage;
 
     public double getWage() {
@@ -10,11 +12,11 @@ public class Teacher extends Person {
         this.wage = wage;
     }
 
-    public String[] getSubjectsTeaching() {
+    public ArrayList<String> getSubjectsTeaching() {
         return subjectsTeaching;
     }
 
-    public void setSubjectsTeaching(String[] subjectsTeaching) {
-        this.subjectsTeaching = subjectsTeaching;
+    public void setSubjectsTeaching(String subjectsTeaching) {
+        this.subjectsTeaching.add(subjectsTeaching);
     }
 }
