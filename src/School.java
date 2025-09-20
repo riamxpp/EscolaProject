@@ -6,6 +6,16 @@ public class School {
     private final ArrayList<SchoolClass> listOfSchoolClass = new ArrayList<SchoolClass>();
     private Teacher[] listOfTeaches;
 
+    public Student findStudent(String cpf) {
+        for (int i=0; i<listOfStudents.size(); i++) {
+            if (listOfStudents.get(i).getCpf().equals(cpf)) {
+                return listOfStudents.get(i);
+            }
+        }
+
+        return null;
+    }
+
     public void registerSchoolClass(SchoolClass schoolClass) {
         this.listOfSchoolClass.add(schoolClass);
     }
