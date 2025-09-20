@@ -4,6 +4,10 @@ public class Teacher extends Person {
     private final  ArrayList<String> subjectsTeaching = new ArrayList<>();
     private double wage;
 
+    public Teacher(String name) {
+        setName(name);
+    }
+
     public double getWage() {
         return wage;
     }
