@@ -1,7 +1,7 @@
 public class SchoolClass {
     private String className;
     private String responsibleTeacher;
-    private Studant[] listOfStudants;
+    private Student[] listOfStudants;
 
     public String getClassName() {
         return className;
@@ -19,11 +19,11 @@ public class SchoolClass {
         this.responsibleTeacher = responsibleTeacher;
     }
 
-    public Studant[] getListOfStudants() {
+    public Student[] getListOfStudants() {
         return listOfStudants;
     }
 
-    public void setListOfStudants(Studant[] listOfStudants) {
+    public void setListOfStudants(Student[] listOfStudants) {
         this.listOfStudants = listOfStudants;
     }
 }
