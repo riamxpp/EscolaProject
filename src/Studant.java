@@ -1,18 +1,17 @@
 public class Studant extends Person {
-    private String registration;
     private String studant_class;
-    private String[] score;
+    private Double[] score;
 
     public Studant(String name) {
         setName(name);
     }
 
-    public String getRegistration() {
-        return registration;
-    }
-
-    public void setRegistration(String registration) {
-        this.registration = registration;
+    @Override // sobrescre o método toString() para conseguir exibir o Student no system.out;
+    public String toString() {
+        return "Nome: " + getName() +
+                ", Turma: " + getStudant_class() +
+                ", Data de Nascimento: " + getDateOfBirth() +
+                ", Ocupação: " + getOccupation();
     }
 
     public String getStudant_class() {
@@ -23,11 +22,11 @@ public class Studant extends Person {
         this.studant_class = studant_class;
     }
 
-    public String[] getScore() {
+    public Double[] getScore() {
         return score;
     }
 
-    public void setScore(String[] score) {
+    public void setScore(Double[] score) {
         this.score = score;
     }
 }
