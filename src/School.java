@@ -10,6 +10,12 @@ public class School {
         this.listOfTeachers.add(teacher);
     }
 
+    public void getTeachers() {
+        for (int i=0; i<listOfTeachers.size(); i++) {
+            System.out.println(listOfTeachers.get(i));
+        }
+    }
+
     public void registerStudent(Student studant) {
         this.listOfStudents.add(studant);
     }
