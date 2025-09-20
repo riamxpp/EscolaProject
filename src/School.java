@@ -1,22 +1,22 @@
 import java.util.ArrayList;
 
 public class School {
-    private final ArrayList<Studant> listOfStudants = new ArrayList<Studant>();
+    private final ArrayList<Student> listOfStudents = new ArrayList<Student>();
     private Teacher[] listOfTeaches;
     private SchoolClass[] listOfSchoolClass;
 
-    public void registerStudant(Studant studant) {
-        this.listOfStudants.add(studant);
+    public void registerStudent(Student studant) {
+        this.listOfStudents.add(studant);
     }
 
     public void getStudents() {
-        for (int i=0; i<listOfStudants.size(); i++) {
-            System.out.println(this.listOfStudants.get(i));
+        for (int i=0; i<listOfStudents.size(); i++) {
+            System.out.println(this.listOfStudents.get(i));
         }
     }
 
-    public ArrayList<Studant> getListOfStudants() {
-        return listOfStudants;
+    public ArrayList<Student> getListOfStudents() {
+        return listOfStudents;
     }
 
     public Teacher[] getListOfTeaches() {
