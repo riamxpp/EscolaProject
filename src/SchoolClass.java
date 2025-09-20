@@ -1,7 +1,9 @@
+import java.util.ArrayList;
+
 public class SchoolClass {
     private String className;
     private String responsibleTeacher;
-    private Student[] listOfStudents;
+    private ArrayList<Student> listOfStudents = new ArrayList<Student>();
 
     public String getClassName() {
         return className;
@@ -19,11 +21,11 @@ public class SchoolClass {
         this.responsibleTeacher = responsibleTeacher;
     }
 
-    public Student[] getListOfStudents() {
+    public ArrayList<Student> getListOfStudents() {
         return listOfStudents;
     }
 
-    public void setListOfStudents(Student[] listOfStudents) {
-        this.listOfStudents = listOfStudents;
+    public void setListOfStudents(Student listOfStudents) {
+        this.listOfStudents.add(listOfStudents);
     }
 }
