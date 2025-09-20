@@ -2,8 +2,13 @@ import java.util.ArrayList;
 
 public class School {
     private final ArrayList<Student> listOfStudents = new ArrayList<Student>();
+    private final ArrayList<Teacher> listOfTeachers = new ArrayList<Teacher>();
     private Teacher[] listOfTeaches;
     private SchoolClass[] listOfSchoolClass;
+
+    public void registerTeacher(Teacher teacher) {
+        this.listOfTeachers.add(teacher);
+    }
 
     public void registerStudent(Student studant) {
         this.listOfStudents.add(studant);
