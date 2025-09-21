@@ -4,7 +4,6 @@ public class School {
     private final ArrayList<Student> listOfStudents = new ArrayList<Student>();
     private final ArrayList<Teacher> listOfTeachers = new ArrayList<Teacher>();
     private final ArrayList<SchoolClass> listOfSchoolClass = new ArrayList<SchoolClass>();
-    private Teacher[] listOfTeaches;
 
     public Student findStudent(String cpf) {
         for (int i=0; i<listOfStudents.size(); i++) {
