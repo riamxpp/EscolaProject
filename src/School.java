@@ -28,13 +28,13 @@ public class School {
         this.listOfSchoolClass.add(schoolClass);
     }
 
-    public void getSchoolClass() {
+    public void getSchoolClassOnSchool() {
         for (int i=0; i<listOfSchoolClass.size(); i++) {
             System.out.println(listOfSchoolClass.get(i));
         }
     }
 
-    public void registerTeacher(Teacher teacher) {
+    public void registerTeacherOnSchool(Teacher teacher) {
         this.listOfTeachers.add(teacher);
     }
 
@@ -44,7 +44,7 @@ public class School {
         }
     }
 
-    public void registerStudent(Student studant) {
+    public void registerStudentOnSchool(Student studant) {
         this.listOfStudents.add(studant);
     }
 
