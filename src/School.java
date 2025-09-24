@@ -5,6 +5,15 @@ public class School {
     private final ArrayList<Teacher> listOfTeachers = new ArrayList<Teacher>();
     private final ArrayList<SchoolClass> listOfSchoolClass = new ArrayList<SchoolClass>();
 
+    public void addTeacherOnClass(Teacher teacher, SchoolClass schoolClass) {
+        boolean hasTeacherOnClass = false;
+        hasTeacherOnClass = schoolClass.verifyTeachOnClass(schoolClass);
+
+        if (!hasTeacherOnClass) {
+            schoolClass.setTeacher(teacher);
+        }
+    }
+
     public Student findStudent(String cpf) {
         for (int i=0; i<listOfStudents.size(); i++) {
             if (listOfStudents.get(i).getCpf().equals(cpf)) {
