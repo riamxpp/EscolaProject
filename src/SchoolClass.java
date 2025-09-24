@@ -3,9 +3,13 @@ import java.util.ArrayList;
 public class SchoolClass {
     private String className;
     private String responsibleTeacher;
-    private Teacher[] listOfTeaches;
+    private Teacher teacher;
     private ArrayList<Student> listOfStudentsOnClass = new ArrayList<Student>();
     private School school;
+    
+    public boolean verifyTeachOnClass(SchoolClass schoolClass) {
+        return schoolClass.getTeacher() != null;
+    }
 
     public void addStudentOnClass(String cpf, School school) {
         this.school = school;
@@ -37,5 +41,13 @@ public class SchoolClass {
 
     public void setListOfStudentsOnClass(Student student) {
         this.listOfStudentsOnClass.add(student);
+    }
+
+    public void setTeacher(Teacher teacher) {
+        this.teacher = teacher;
+    }
+
+    public Teacher getTeacher(){
+        return this.teacher;
     }
 }
