@@ -5,6 +5,14 @@ public class School {
     private final ArrayList<Teacher> listOfTeachers = new ArrayList<Teacher>();
     private final ArrayList<SchoolClass> listOfSchoolClass = new ArrayList<SchoolClass>();
 
+    public boolean addStudentOnClass(Student student, SchoolClass schoolClass) {
+        if (!schoolClass.verifyStudentOnClass(student)) {
+            this.listOfStudents.add(student);
+            return true;
+        };
+        return false;
+    }
+
     public void addTeacherOnClass(Teacher teacher, SchoolClass schoolClass) {
         boolean hasTeacherOnClass = false;
         hasTeacherOnClass = schoolClass.verifyTeachOnClass(schoolClass);
@@ -42,10 +50,6 @@ public class School {
         for (int i=0; i<listOfTeachers.size(); i++) {
             System.out.println(listOfTeachers.get(i));
         }
-    }
-
-    public void registerStudentOnSchool(Student studant) {
-        this.listOfStudents.add(studant);
     }
 
     public void getStudents() {
