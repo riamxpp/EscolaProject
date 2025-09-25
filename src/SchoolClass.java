@@ -8,6 +8,13 @@ public class SchoolClass {
     private School school;
 
 
+    @Override // sobrescre o método toString() para conseguir exibir o Student no system.out;
+    public String toString() {
+        return "Nome: " + getClassName() +
+                ", Professor: " + getResponsibleTeacher();
+//                ", School: " + this.school.getName(); fazer depois
+    }
+
     public boolean verifyStudentOnClass(Student studentToRegister) {
         for ( Student student : this.listOfStudentsOnClass) {
             if (student.getCpf().equals(studentToRegister.getCpf())) {
@@ -21,12 +28,8 @@ public class SchoolClass {
         return this.getTeacher() != null;
     }
 
-    public void addStudentOnClass(String cpf, School school) {
-        this.school = school;
-        Student student = this.school.findStudent(cpf);
-        if (student != null) {
-            this.setListOfStudentsOnClass(student);
-        }
+    public void addStudentOnClass(Student student) {
+        this.setListOfStudentsOnClass(student);
     }
 
     public String getClassName() {

@@ -5,12 +5,33 @@ public class School {
     private final ArrayList<Teacher> listOfTeachers = new ArrayList<Teacher>();
     private final ArrayList<SchoolClass> listOfSchoolClass = new ArrayList<SchoolClass>();
 
-    public boolean addStudentOnClass(Student student, SchoolClass schoolClass) {
-        if (!schoolClass.verifyStudentOnClass(student)) {
-            this.listOfStudents.add(student);
+    public boolean addStudentOnClass(String studentCPF, String className) {
+        Student foundStudent = findStudent(studentCPF);
+        SchoolClass schoolClass = findSchoolClass(className);
+        if (foundStudent == null) {
+            return false;
+        }
+        if (schoolClass != null) {
+            schoolClass.addStudentOnClass(foundStudent);
             return true;
         };
         return false;
+    }
+
+    public SchoolClass findSchoolClass(String className) {
+        for (SchoolClass schoolClass : this.listOfSchoolClass) {
+            if (schoolClass.getClassName().equals(className)) {
+                return  schoolClass;
+            }
+        }
+
+        return null;
+    }
+
+    public void addStudentOnSchool(Student student) {
+        if (student != null) {
+            this.listOfStudents.add(student);
+        }
     }
 
     public void addTeacherOnClass(Teacher teacher, SchoolClass schoolClass) {
