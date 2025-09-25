@@ -6,7 +6,17 @@ public class SchoolClass {
     private Teacher teacher;
     private ArrayList<Student> listOfStudentsOnClass = new ArrayList<Student>();
     private School school;
-    
+
+
+    public boolean verifyStudentOnClass(Student studentToRegister) {
+        for ( Student student : this.listOfStudentsOnClass) {
+            if (student.getCpf().equals(studentToRegister.getCpf())) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     public boolean verifyTeachOnClass(SchoolClass schoolClass) {
         return schoolClass.getTeacher() != null;
     }
