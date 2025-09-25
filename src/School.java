@@ -4,6 +4,7 @@ public class School {
     private final ArrayList<Student> listOfStudents = new ArrayList<Student>();
     private final ArrayList<Teacher> listOfTeachers = new ArrayList<Teacher>();
     private final ArrayList<SchoolClass> listOfSchoolClass = new ArrayList<SchoolClass>();
+    private String schoolName;
 
     public boolean addStudentOnClass(String studentCPF, String className) {
         Student foundStudent = findStudent(studentCPF);
@@ -77,5 +78,13 @@ public class School {
         for (int i=0; i<listOfStudents.size(); i++) {
             System.out.println(this.listOfStudents.get(i));
         }
+    }
+
+    public void setSchoolName(String schoolName) {
+        this.schoolName = schoolName;
+    }
+
+    public String getSchoolName() {
+        return schoolName;
     }
 }
