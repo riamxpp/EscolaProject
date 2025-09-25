@@ -15,7 +15,7 @@ public class School {
 
     public void addTeacherOnClass(Teacher teacher, SchoolClass schoolClass) {
         boolean hasTeacherOnClass = false;
-        hasTeacherOnClass = schoolClass.verifyTeachOnClass(schoolClass);
+        hasTeacherOnClass = schoolClass.verifyTeachOnClass();
 
         if (!hasTeacherOnClass) {
             schoolClass.setTeacher(teacher);

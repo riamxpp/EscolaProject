@@ -17,8 +17,8 @@ public class SchoolClass {
         return false;
     }
 
-    public boolean verifyTeachOnClass(SchoolClass schoolClass) {
-        return schoolClass.getTeacher() != null;
+    public boolean verifyTeachOnClass() {
+        return this.getTeacher() != null;
     }
 
     public void addStudentOnClass(String cpf, School school) {
