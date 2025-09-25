@@ -8,11 +8,11 @@ public class SchoolClass {
     private School school;
 
 
-    @Override // sobrescre o método toString() para conseguir exibir o Student no system.out;
+    @Override //
     public String toString() {
         return "Nome: " + getClassName() +
-                ", Professor: " + getResponsibleTeacher();
-//                ", School: " + this.school.getName(); fazer depois
+                ", Professor: " + getResponsibleTeacher() +
+                ", School: " + this.school.getSchoolName();
     }
 
     public boolean verifyStudentOnClass(Student studentToRegister) {
